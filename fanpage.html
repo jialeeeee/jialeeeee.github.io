@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Justin Bieber Fan Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #f8d7e6, #ffffff);
+      color: #333;
+    }
+    header {
+      background: #ff6fa5;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      background: #ff99c8;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
+      border-bottom: 2px solid #ff6fa5;
+      padding-bottom: 5px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .gallery img {
+      width: 30%;
+      border-radius: 8px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background: #ff6fa5;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    button {
+      background: #ff6fa5;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ff99c8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Justin Bieber Fan Page</h1>
+    <h2>I LOVE MATCHA, LABUBU, KESHI, FEMALE LITERATURE BOOKS</h2>
+    <p>Celebrating the music, journey, and life of Justin Bieber 🎵</p>
+  </header>
+  <nav>
+    <a href="#bio">Biography</a>
+    <a href="#music">Top Songs</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#quiz">Fan Quiz</a>
+  </nav>
+  <main>
+    <section id="bio">
+      <h2>Biography</h2>
+      <p>
+        Justin Bieber, born March 1, 1994, is a Canadian singer and songwriter. 
+        Discovered through YouTube, he rose to global fame with hits like <em>Baby</em>, 
+        <em>Sorry</em>, and <em>Love Yourself</em>. Bieber continues to be a major figure 
+        in pop and R&B music, inspiring millions of fans worldwide.
+      </p>
+    </section>
+
+    <section id="music">
+      <h2>Top Songs</h2>
+      <ul>
+        <li>Baby (feat. Ludacris)</li>
+        <li>Sorry</li>
+        <li>Love Yourself</li>
+        <li>Peaches</li>
+        <li>What Do You Mean?</li>
+      </ul>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="jb1.webp" alt="Justin Bieber 1">
+        <img src="jb2.jpg" alt="Justin Bieber 2">
+        <img src="jb3.jpg" alt="Justin Bieber 3">
+      </div>
+    </section>
+
+    <section id="quiz">
+      <h2>Fan Quiz</h2>
+      <p>Think you know Justin? Test yourself!</p>
+      <p><strong>Question:</strong> What year was Justin Bieber born?</p>
+      <button onclick="checkAnswer(1994)">1994</button>
+      <button onclick="checkAnswer(1996)">1996</button>
+      <button onclick="checkAnswer(1992)">1992</button>
+      <p id="quiz-result"></p>
+    </section>
+  </main>
+  <footer>
+    <p>Made with ❤️ by Beliebers Worldwide</p>
+  </footer>
+
+  <script>
+    function checkAnswer(year) {
+      const result = document.getElementById("quiz-result");
+      if (year === 1994) {
+        result.textContent = "Correct! 🎉 Justin was born in 1994.";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Oops! Try again.";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
